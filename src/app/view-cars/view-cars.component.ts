@@ -7,7 +7,7 @@ import { ApiService } from '../api.service';
   styleUrls: ['./view-cars.component.css']
 })
 export class ViewCarsComponent {
-  data:any={}
+  data:any=[]
   constructor(private api:ApiService){
     this.api.fetchCarData().subscribe(
       (response:any)=>{

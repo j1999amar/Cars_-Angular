@@ -8,13 +8,28 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { AddCarsComponent } from './add-cars/add-cars.component';
 import { ViewCarsComponent } from './view-cars/view-cars.component';
-const myRouter:Routes=[]
+import { NavbarComponent } from './navbar/navbar.component';
+const myRouter:Routes=[
+  {
+    path:'',
+    component:AdminLoginComponent
+  },
+  {
+    path:'addCars',
+    component:AddCarsComponent
+  },
+  {
+    path:'viewCars',
+    component:ViewCarsComponent
+  }
+]
 @NgModule({
   declarations: [
     AppComponent,
     AdminLoginComponent,
     AddCarsComponent,
-    ViewCarsComponent
+    ViewCarsComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
