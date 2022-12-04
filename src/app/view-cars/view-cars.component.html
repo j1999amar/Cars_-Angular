@@ -1,12 +1,12 @@
+<app-navbar></app-navbar>
 <div class="container">
     <div class="row">
       <h3>View Friends</h3>
       <div class="col-12 col-sm-12 col-md-12 col-lg-12- col-xl-12 col-xxl-12">
         <div class="row g-3">
-          <div class="col-12 col-sm 12 col-md-6 col-lg-4 col-xl-3 col-xxl-3" *ngFor="let i of data" >
-            <div class="card" style="width: 18rem;">
-              <img height="215px" width="215px"alt="{{i.carModel}}"
-              src="{{i.carImage}}" />
+          <div class="col-12 col-sm 12 col-md-6 col-lg-4 col-xl-3 col-xxl-3 text-center" *ngFor="let i of data" >
+            <div class="card" >
+              <img src="{{i.carImage}}" />
               <div class="card-body  text-center">
                 <h5 class="card-title">Car Model : {{i.carModel}}</h5>
                 <p class="card-text"> Car Price : {{i.carPrice}}<br></p>
