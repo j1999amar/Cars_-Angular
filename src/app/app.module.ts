@@ -5,9 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { AddCarsComponent } from './add-cars/add-cars.component';
-
+const myRouter:Routes=[]
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +18,7 @@ import { AddCarsComponent } from './add-cars/add-cars.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    RouterModule,
+    RouterModule.forRoot(myRouter),
     HttpClientModule
   ],
   providers: [],
