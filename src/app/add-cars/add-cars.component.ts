@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApiService } from '../api.service';
 
 @Component({
@@ -7,7 +8,7 @@ import { ApiService } from '../api.service';
   styleUrls: ['./add-cars.component.css']
 })
 export class AddCarsComponent {
-  constructor(private api:ApiService){  }
+  constructor(private api:ApiService, private route:Router){  }
   carModel=""
   carPrice=""
   carImage=""
@@ -17,10 +18,14 @@ export class AddCarsComponent {
     "carPrice":this.carPrice,
     "carImage":this.carImage
     }          
-    console.log(carsData)
-
     this.api.AddCarsData(carsData).subscribe(
       (response:any)=>{
+        if(response.status=="success"){
+          this.route.navigate(['/viewCars']) 
+        }else{
+
+          console.log(response)
+        }
       
 
       }
