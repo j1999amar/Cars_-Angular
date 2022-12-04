@@ -7,12 +7,14 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { AddCarsComponent } from './add-cars/add-cars.component';
+import { ViewCarsComponent } from './view-cars/view-cars.component';
 const myRouter:Routes=[]
 @NgModule({
   declarations: [
     AppComponent,
     AdminLoginComponent,
-    AddCarsComponent
+    AddCarsComponent,
+    ViewCarsComponent
   ],
   imports: [
     BrowserModule,
